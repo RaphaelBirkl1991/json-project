@@ -1,11 +1,12 @@
+import 'entities/user.dart';
 import 'implementaions/jsonExchange.dart';
-import 'implementaions/newUser.dart';
 
-void main() {
+Future<void> main() async {
   final JsonExchange jsonExchange = JsonExchange();
-  final NewUser newUser = NewUser();
+  final User user = User("raphael.birkl@gmail.com", "123456", "raphael birkl");
 
-  jsonExchange.checkForUsersJson();
-  jsonExchange.checkForFaqsJason();
-  newUser.addUser("Hans Müller");
+  await user.addUser(
+      user); // Verwende "await", da "addUser" eine asynchrone Methode ist
+  // jsonExchange.checkForUsersJson();
+  // jsonExchange.checkForFaqsJason();
 }

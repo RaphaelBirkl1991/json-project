@@ -1,2 +1,1 @@
-[{"email": "sobhi@test.de", "password": "1234", "name": "Sobhi"},
-{"email": "test@test.de", "password": "4321", "name": "Max"}]
+[{"id":2,"email":"beispiel@email.com","password":"passwort123","name":"Beispiel Benutzer"},{"id":3,"email":"anderer@email.com","password":"passwort456","name":"Anderer Benutzer"},{"id":4,"email":"raphael.birkl@gmail.com","password":"123456","name":"raphael birkl"},{"id":5,"email":"raphael.birkl@gmail.com","password":"123456","name":"raphael birkl"},{"id":6,"email":"raphael.birkl@gmail.com","password":"123456","name":"raphael birkl"},{"id":1,"email":"raphael.birkl@gmail.com","password":"123456","name":"raphael birkl"}]

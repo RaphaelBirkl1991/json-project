@@ -51,4 +51,32 @@ class User {
       print('Fehler beim Hinzufügen des Benutzers: $e');
     }
   }
+
+  Future<void> removeUserById(int id) async {
+    try {
+      final file =
+          File('Tut/assets/users.json'); // Annahme: Datei heißt users.json
+      List<User> users = [];
+
+      if (await file.exists()) {
+        final data = await file.readAsString();
+        final userList = json.decode(data);
+
+        for (var user in userList) {
+          users.add(User.fromJSON(user));
+        }
+
+        users.removeWhere((user) =>
+            user.id == id); // Entferne Benutzer mit der übergebenen ID
+
+        final updatedUsers = users.map((user) => user.toJson()).toList();
+        await file.writeAsString(json.encode(updatedUsers));
+        print('User mit ID $id erfolgreich gelöscht.');
+      } else {
+        print('Datei users.json nicht gefunden.');
+      }
+    } catch (e) {
+      print('Fehler beim Löschen des Benutzers: $e');
+    }
+  }
 }

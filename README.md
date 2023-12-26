@@ -1,5 +1,6 @@
 # JSON Project
 
+![json_file_picture](json.jpeg)
 <img src="json.jpeg alt="json_file_image" width="200" height="200">
 
 ### Integration of an JSON API in Dart code
